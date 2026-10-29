@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -10,14 +10,64 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header>
-        <h1>привет)</h1>
+    <header class="header">
+      <div class="header_container">
+        <a href="/" class="header_logo">
+          <img src="./img/logo.svg" alt="Top Scope" class="header_logo-img" />
+          <span class="header_logo-text">Место, где хочется работать</span>
+        </a>
+
+        <button type="button" class="button button_s">
+          Записаться на пробный день
+        </button>
+      </div>
     </header>
-    <main>
-        <h2>как дела?)</h2>
+
+    <main class="main_content">
+      <section class="hero">
+        <div class="hero_overlay"></div>
+        <div class="hero_content">
+          <h1 class="hero_title">
+            Попробуйте поработать в коворкинге — это вдохновляет
+          </h1>
+          <h3 class="hero_subtitle">
+            Запишитесь на бесплатный день и найдите идеальное место для работы
+          </h3>
+          <button type="button" class="button button_m">
+            Записаться на пробный день
+          </button>
+        </div>
+      </section>
+      <section class="about">
+        <div class="about_container">
+          <div class="about_text">
+            <h2 class="about_title">О коворкинге Top Scope</h2>
+            <p class="about_description">
+              Работать в коворкинге Top Scope — отличная идея, потому что здесь
+              комфортная атмосфера, удобные рабочие зоны и комьюнити
+              профессионалов, с которыми можно обмениваться идеями.<br /><br />
+
+              Пространство оборудовано всем необходимым для продуктивной работы,
+              а гибкие условия позволяют адаптировать рабочий процесс под свои
+              задачи.<br /><br />
+
+              Кроме того, регулярные мероприятия и нетворкинг-сессии помогают
+              завести полезные знакомства и развивать бизнес.
+            </p>
+          </div>
+
+          <div class="about_image">
+            <img
+              src="../img/about_photo.png"
+              alt="Интерьер коворкинга Top Scope: рабочие места и зона отдыха"
+              class="about_img"
+            />
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
-        <h3>я тут все хорошо</h3>
+      <h3>я тут все хорошо</h3>
     </footer>
   </body>
 </html>

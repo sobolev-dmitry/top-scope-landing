@@ -41,10 +41,4 @@
 
   /* --- Границы и оверлеи --- */
   --color-border-default: #D1D5DB;
-  --color-overlay-base: #7F786E;
-}
-
-/* Полупрозрачный оверлей (для Hero) */
-:root {
-  --overlay-rgba: rgba(127, 120, 110, 0.7);
 }
