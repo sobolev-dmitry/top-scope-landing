@@ -1,0 +1,50 @@
+:root {
+  /* --- Шрифт и веса --- */
+  --font-family: 'MyInter', sans-serif;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  /* --- Размеры шрифтов --- */
+  /* Заголовки */
+  --fs-title-1: 48px;
+  --fs-title-2: 36px;
+  --fs-title-3-bold: 24px;
+  --fs-title-3-md: 24px;
+  --fs-title-3-reg: 24px;
+
+  /* Мета-текст и лейблы */
+  --fs-meta: 20px;
+  --fs-label: 18px;
+
+  /* Основной текст */
+  --fs-body: 16px;
+  --fs-helper: 14px;
+
+  /* --- Цвета текста --- */
+  --color-text-main: #1F2124;
+  --color-text-secondary: #6B7280;
+  --color-text-on-dark: #FFFFFF;
+  --color-text-error: #D32F2F;
+
+  /* --- Фоны --- */
+  --color-bg-white: #FFFFFF;
+  --color-bg-light: #F4F5F7;
+  --color-bg-disabled: #E9E9E9;
+
+  /* --- Акценты и кнопки --- */
+  --color-accent-main: #C94A32;
+  --color-accent-hover: #FF5E3F;
+  --color-accent-pressed: #771F0E;
+  --color-accent-focus: #4FC3F7;
+
+  /* --- Границы и оверлеи --- */
+  --color-border-default: #D1D5DB;
+  --color-overlay-base: #7F786E;
+}
+
+/* Полупрозрачный оверлей (для Hero) */
+:root {
+  --overlay-rgba: rgba(127, 120, 110, 0.7);
+}
