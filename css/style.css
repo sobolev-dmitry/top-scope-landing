@@ -33,6 +33,23 @@
   line-height: auto;
 }
 
+/* Состояния кнопки */
+
+.button:hover {
+  background-color: var(--color-accent-hover);
+}
+
+.button:active {
+  background-color: var(--color-accent-pressed);
+}
+
+.button:focus-visible {
+  outline: 4px solid var(--color-accent-focus, #ff6b45);
+  outline-offset: 2px;
+}
+
+/* Шапка */
+
 .header {
   width: 100%;
   height: 90px;
@@ -178,5 +195,102 @@
   width: 620px;
   border-radius: 16px;
   object-fit: cover;
+  display: block;
+}
+
+/* Футер */
+
+.footer {
+  background-color: var(--color-bg-light, #f4f5f7);
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.footer_container {
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer_left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer_copyright {
+  font-family: var(--font-family);
+  font-size: var(--fs-body, 16px);
+  font-weight: var(--fw-regular, 400);
+  line-height: auto;
+  color: var(--color-text-main, #1f2124);
+}
+
+.footer_center {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.footer_address {
+  font-family: var(--font-family);
+  font-weight: var(--fw-regular, 400);
+  font-size: var(--fs-body, 16px);
+  color: var(--color-text-main, #1f2124);
+}
+
+.footer_contact {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer_phone {
+  text-decoration: none;
+  color: var(--color-text-main, #1f2124);
+  font-family: var(--font-family);
+  font-weight: var(--fw-regular, 400);
+  font-size: var(--fs-body, 16px);
+}
+
+.footer_socials {
+  display: flex;
+  gap: 12px;
+}
+
+.footer_social-link {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+.footer_icon {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.footer_right {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 68px;
+}
+
+.footer_to-top {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+}
+
+.footer_icon-up {
+  width: 100%;
+  height: 100%;
   display: block;
 }
