@@ -202,7 +202,7 @@
 
 .section_priority-card {
   padding: 25px 100px;
-  max-width: 1440px;
+  width: 1440px;
   margin: 0 auto;
 }
 
@@ -278,6 +278,126 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+/* Отзывы */
+
+.section_reviews {
+  padding-left: 100px;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: var(--color-bg-light);
+  overflow: hidden;
+}
+
+.reviews_container-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 50px;
+  padding-bottom: 118px;
+}
+
+.reviews_track-wrapper {
+  overflow: visible;
+  width: 100%;
+}
+
+.reviews_track {
+  display: flex;
+  gap: 20;
+}
+
+.review_card {
+  width: 400px;
+  height: 350px;
+  padding: 25px;
+  background-color: var(--color-bg-white);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.review_card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.review_header {
+  height: 73px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.review_avatar {
+  width: 73px;
+  height: 73px;
+  object-fit: cover;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: block;
+}
+
+.review_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.review_name {
+  margin: 0;
+  font-family: var(--font-family);
+  font-weight: var(--fw-medium, 500);
+  font-size: var(--fs-meta, 20px);
+  line-height: auto;
+  color: var(--color-text-main, #1f2124);
+}
+
+.review_meta {
+  margin: 4px 0 0 0;
+  font-family: var(--font-family);
+  font-weight: var(--fw-regular, 400);
+  font-size: var(--fs-body, 16px);
+  line-height: auto;
+  color: var(--color-text-secondary);
+}
+
+.review_stars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-top: 6px;
+}
+
+.review_star-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.review_text {
+  margin: 0;
+  font-family: var(--font-family);
+  font-weight: var(--fw-regular, 400);
+  font-size: var(--fs-body, 16px);
+  line-height: auto;
+  color: var(--color-text-main, #1f2124);
+}
+
+.my-reviews-slider {
+  width: 100%;
+}
+
+.swiper-wrapper {
+  gap: 0;
 }
 
 /* Футер */
