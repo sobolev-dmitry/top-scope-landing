@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   gap: 100px;
-  max-width: 1440px;
   margin: 0 auto;
   padding-top: 50px;
   padding-bottom: 100px;
@@ -51,6 +50,8 @@
 /* Секция Hero */
 .hero {
   position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
   width: 100%;
   height: 743px;
   overflow: hidden;
@@ -104,8 +105,6 @@
 
 /* Секция About */
 .about {
-  width: 100%;
-  padding: 54px 100px;
   background-color: var(--color-bg-light, #f4f5f7);
 }
 
@@ -114,6 +113,9 @@
   flex-wrap: wrap;
   gap: 96px;
   max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 54px 100px;
 }
 
 .about_text {
@@ -144,27 +146,27 @@
   display: flex;
   flex: 1;
   justify-content: flex-end;
-  min-width: 300px;
 }
 
 .about_img {
   display: block;
-  width: 620px;
+  max-width: 620px;
   border-radius: 16px;
   object-fit: cover;
 }
 
 /* Преимущества */
 .section_priority-card {
-  width: 1440px;
-  margin: 0 auto;
-  padding: 25px 100px;
+  background-color: inherit;
 }
 
 .priority_container-wrapper {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 25px 0;
 }
 
 .priority_container {
@@ -176,43 +178,37 @@
 
 /* Отзывы */
 .section_reviews {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding-left: 100px;
   overflow: hidden;
   background-color: var(--color-bg-light);
 }
 
 .reviews_container-wrapper {
   display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 76px;
   flex-direction: column;
-  gap: 24px;
   padding-top: 50px;
-  padding-bottom: 118px;
+  padding-bottom: 94px;
+}
+
+.reviews_container-wrapper .section_title {
+  padding-left: 24px;
 }
 
 .reviews_track-wrapper {
   width: 100%;
+  padding: 24px;
   overflow: visible;
-}
-
-.reviews_track {
-  display: flex;
-  gap: 20;
 }
 
 .my-reviews-slider {
   width: 100%;
-}
-
-.swiper-wrapper {
-  gap: 0;
+  overflow: hidden;
 }
 
 /* Футер */
 .footer {
-  max-width: 1440px;
-  margin: 0 auto;
   background-color: var(--color-bg-light, #f4f5f7);
 }
 
@@ -221,6 +217,8 @@
   justify-content: space-between;
   align-items: flex-start;
   padding: 20px 100px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .footer_left {
