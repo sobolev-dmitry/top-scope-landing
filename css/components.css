@@ -1,0 +1,192 @@
+/* Стили кнопки */
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 24px;
+  color: var(--color-text-on-dark, #ffffff);
+  font-family: inherit;
+  font-weight: var(--fw-bold, 700);
+  background-color: var(--color-accent-main, #c94a32);
+}
+
+.button_s {
+  font-size: var(--fs-body, 16px);
+  line-height: auto;
+}
+
+.button_m {
+  font-size: var(--fs-title-3-bold, 24px);
+  line-height: auto;
+}
+
+.trial-right .button.button_m {
+  margin: 0 auto;
+  margin-top: 18px;
+}
+
+/* Состояния кнопки */
+.button:hover {
+  background-color: var(--color-accent-hover);
+}
+
+.button:active {
+  background-color: var(--color-accent-pressed);
+}
+
+.button:focus-visible {
+  outline: 4px solid var(--color-accent-focus);
+  outline-offset: 2px;
+}
+
+/* Карточка преимущества */
+.priority_card {
+  width: 400px;
+  height: 200px;
+  border-radius: 16px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.priority_card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  padding: 32px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background-color: var(--color-bg-white, #ffffff);
+}
+
+.priority_icon {
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 15px;
+  object-fit: contain;
+}
+
+.priority_title {
+  margin: 0;
+  color: var(--color-text-main, #1f2124);
+  font-family: var(--font-family);
+  font-weight: var(--fw-medium, 500);
+  font-size: var(--fs-title-3-md, 24px);
+  line-height: auto;
+  text-align: center;
+}
+
+.priority_text {
+  display: -webkit-box;
+  margin-top: 6px;
+  margin-bottom: 0;
+  overflow: hidden;
+  color: var(--color-text-main, #1f2124);
+  font-family: var(--font-family);
+  font-weight: var(--fw-regular, 400);
+  font-size: var(--fs-body, 16px);
+  line-height: auto;
+  text-align: center;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* Состояние карточка преимущества */
+.priority_card:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  transform: translateY(-6px);
+}
+
+/* Карточка отзыва */
+.review_card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 400px;
+  height: 350px;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background-color: var(--color-bg-white);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.review_header {
+  display: flex;
+
+  align-items: center;
+  gap: 12px;
+  height: 73px;
+  margin-bottom: 25px;
+}
+
+.review_avatar {
+  display: block;
+  flex-shrink: 0;
+  width: 73px;
+  height: 73px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.review_name {
+  margin: 0;
+  color: var(--color-text-main, #1f2124);
+  font-family: var(--font-family);
+  font-weight: var(--fw-medium, 500);
+  font-size: var(--fs-meta, 20px);
+  line-height: auto;
+}
+
+.review_meta {
+  margin: 4px 0 0 0;
+  color: var(--color-text-secondary);
+  font-family: var(--font-family);
+  font-weight: var(--fw-regular, 400);
+  font-size: var(--fs-body, 16px);
+  line-height: auto;
+}
+
+.review_stars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-top: 6px;
+}
+
+.review_star-icon {
+  display: block;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.review_text {
+  margin: 0;
+  color: var(--color-text-main, #1f2124);
+  font-family: var(--font-family);
+  font-weight: var(--fw-regular, 400);
+  font-size: var(--fs-body, 16px);
+  line-height: auto;
+}
+
+/* Состояние карточка отзыва */
+.review_card:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  transform: translateY(-6px);
+}

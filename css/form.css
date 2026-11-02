@@ -1,0 +1,210 @@
+/* Форма */
+.section_trial-form {
+  max-width: 1240px;
+  margin: 0 auto;
+  border: 1px solid var(--color-border-default);
+  border-radius: 16px;
+  background-color: var(--color-bg-white);
+}
+
+.trial-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Левая сторона */
+.trial-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 83px 95px 83px 80px;
+}
+
+.trial-title {
+  margin: 0;
+  color: var(--color-text-main, #1f2124);
+  font-family: var(--font-family);
+  font-weight: var(--fw-medium, 500);
+  font-size: var(--fs-title-2, 36px);
+  line-height: auto;
+}
+
+.trial-subtitle {
+  margin-top: 16px;
+  color: var(--color-text-main, #1f2124);
+  font-family: var(--font-family);
+  font-weight: var(--fw-regular, 400);
+  font-size: var(--fs-meta, 20px);
+  line-height: auto;
+}
+
+.trial-illustration-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: auto;
+}
+
+.trial-illustration {
+  display: block;
+  width: 223px;
+  height: 223px;
+  object-fit: contain;
+}
+
+/* Правая часть (форма) */
+.trial-right {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  border-radius: 16px;
+  padding: 50px 90px;
+  background-color: var(--color-bg-light);
+}
+
+/* Поля и лейблы */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-label {
+  color: var(--color-text-main, #1f2124);
+  font-family: var(--font-family);
+  font-weight: var(--fw-regular, 400);
+  font-size: var(--fs-label, 18px);
+}
+
+/* Базовые стили инпутов */
+.form-input,
+.form-input-textarea {
+  width: 100%;
+  border: 1px solid var(--color-bg-light);
+  border-radius: 12px;
+  padding: 10px 16px;
+  outline: none;
+  color: var(--color-text-main);
+  font-family: var(--font-family);
+  font-weight: var(--fw-regular, 400);
+  font-size: var(--fs-body, 16px);
+  background-color: var(--color-bg-white);
+  transition: border-color 0.2s ease;
+}
+
+.form-input::placeholder,
+.form-input-textarea::placeholder {
+  color: var(--color-text-secondary);
+}
+
+/* Состояние фокуса */
+.form-input:focus,
+.form-input-textarea:focus {
+  border-color: var(--color-accent-active);
+}
+
+/* Текстовая область — дополнительные настройки */
+.form-input-textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+
+/* Сообщения об ошибках */
+.form-error {
+  display: none;
+  margin: 0;
+  color: var(--color-text-error);
+  font-family: var(--font-family);
+  font-weight: var(--fw-regular, 400);
+  font-size: var(--fs-helper, 14px);
+  line-height: auto;
+}
+
+.form-group.has-error .form-error {
+  display: block;
+}
+
+/* При ошибке рамка становится красной */
+.form-group.has-error .form-input,
+.form-group.has-error .form-input-textarea {
+  border-color: var(--color-text-error);
+}
+
+/* Красим лейбл при ошибке */
+.form-group.has-error .form-label {
+  color: var(--color-text-error);
+}
+
+/* Кастомный чекбокс */
+.custom-checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.custom-checkbox-input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.custom-checkbox-box {
+  position: relative;
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+
+  border: 2px solid var(--color-text-main);
+  border-radius: 4px;
+  background-color: var(--color-bg-white);
+  transition: border-color 0.2s ease;
+}
+
+/* Галочка */
+.custom-checkbox-box::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: none;
+  width: 10px;
+  height: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 8'%3E%3Cpath d='M1 4 L4 7 L9 1' stroke='var(--color-accent, %23ff6b45)' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: translate(-50%, -50%);
+}
+
+.custom-checkbox-input:checked + .custom-checkbox-box::after {
+  display: block;
+}
+
+/* Состояние ошибки для чекбокса */
+.form-group.has-error .custom-checkbox-box {
+  border-color: var(--color-text-error);
+}
+
+.custom-checkbox-text {
+  color: var(--color-text-main);
+  font-family: var(--font-family);
+  font-weight: var(--fw-regular, 400);
+  font-size: var(--fs-helper, 14px);
+  line-height: auto;
+}
+
+/* Адаптив: на планшетах и мобильных — в одну колонку */
+@media (max-width: 1024px) {
+  .trial-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  .trial-right {
+    padding: 40px;
+  }
+}

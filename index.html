@@ -11,6 +11,8 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/form.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link
       rel="icon"
@@ -37,7 +39,7 @@
           <img src="./img/logo.svg" alt="Top Scope" class="header_logo-img" />
           <span class="header_logo-text">Место, где хочется работать</span>
         </a>
-        <button type="button" class="button button_s">
+        <button type="button" class="button button_s" data-scroll-to="#form">
           Записаться на пробный день
         </button>
       </div>
@@ -52,7 +54,7 @@
           <h3 class="hero_subtitle">
             Запишитесь на бесплатный день и найдите идеальное место для работы
           </h3>
-          <button type="button" class="button button_m">
+          <button type="button" class="button button_m" data-scroll-to="#form">
             Записаться на пробный день
           </button>
         </div>
@@ -357,6 +359,93 @@
           </div>
         </div>
       </section>
+      <section class="section_trial-form" id="form">
+        <div class="trial-container">
+          <div class="trial-left">
+            <h2 class="trial-title">Запишись уже сейчас на пробный день</h2>
+            <p class="trial-subtitle">
+              Оставьте контакты — мы подтвердим бронь и пришлём детали на почту
+            </p>
+            <div class="trial-illustration-wrapper">
+              <img
+                src="./img/coffe_img.png"
+                alt="Чашка кофе"
+                class="trial-illustration"
+              />
+            </div>
+          </div>
+          <form class="trial-right" action="#" method="POST">
+            <div class="form-group">
+              <label for="name" class="form-label">Имя</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Введите имя"
+                class="form-input"
+              />
+              <span class="form-error">Ошибка: введите имя</span>
+            </div>
+            <div class="form-group">
+              <label for="phone" class="form-label">Телефон</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+7 (___) ___-__-__"
+                class="form-input"
+              />
+              <span class="form-error">Ошибка: неверный формат телефона</span>
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="name@example.com"
+                class="form-input"
+              />
+              <span class="form-error">Ошибка: проверьте email</span>
+            </div>
+            <div class="form-group">
+              <label for="date" class="form-label">Дата</label>
+              <!-- ИСПРАВЛЕНО: type="date" вместо text -->
+              <input type="date" id="date" name="date" class="form-input" />
+              <span class="form-error">Ошибка: укажите дату</span>
+            </div>
+            <div class="form-group form-group-textarea">
+              <label for="comments" class="form-label">Ваши пожелания</label>
+              <textarea
+                id="comments"
+                name="comments"
+                rows="3"
+                placeholder="Расскажите, что важно для вас..."
+                class="form-input form-input-textarea optional"
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label class="custom-checkbox-wrapper">
+                <input
+                  type="checkbox"
+                  id="agree"
+                  name="agree"
+                  class="custom-checkbox-input"
+                  checked
+                />
+                <span class="custom-checkbox-box"></span>
+                <span class="custom-checkbox-text">
+                  Даю согласие на обработку персональных данных
+                </span>
+              </label>
+              <span class="form-error">Ошибка: нужно дать согласие</span>
+            </div>
+            <button type="submit" class="button button_m">
+              Записаться на пробный день
+            </button>
+          </form>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="footer_container">
@@ -389,7 +478,7 @@
           </div>
         </div>
         <div class="footer_right">
-          <button type="button" class="button button_s">
+          <button type="button" class="button button_s" data-scroll-to="#form">
             Записаться на пробный день
           </button>
           <a href="#top" class="footer_to-top">
